@@ -1,0 +1,25 @@
+﻿@model RectangleApp.Models.Rectangle
+
+<h2>Dodaj prostokąt</h2>
+
+<form asp-action="AddRectangle">
+    <div>
+        <label for="height">Wysokość:</label>
+        <input type="number" id="height" name="Height" required min="1" max="1000000" step="any" />
+        <select name="HeightUnit">
+            <option value="mm">mm</option>
+            <option value="cm">cm</option>
+            <option value="m" selected>m</option>
+        </select>
+    </div>
+    <div>
+        <label for="width">Szerokość:</label>
+        <input type="number" id="width" name="Width" required min="1" max="1000000" step="any" />
+        <select name="WidthUnit">
+            <option value="mm">mm</option>
+            <option value="cm">cm</option>
+            <option value="m" selected>m</option>
+        </select>
+    </div>
+    <button type="submit">Oblicz</button>
+</form>

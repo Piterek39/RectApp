@@ -1,0 +1,17 @@
+﻿@model RectangleApp.Models.Rectangle
+
+<h2>Wynik</h2>
+
+<p>Wymiary prostokąta:</p>
+<ul>
+    <li>Wysokość: @Model.Height @Model.HeightUnit</li>
+    <li>Szerokość: @Model.Width @Model.WidthUnit</li>
+</ul>
+
+@{
+    var areaInSquareMeters = (Model.Height * Model.Width); 
+}
+
+<p>Pole powierzchni: @areaInSquareMeters m<sup>2</sup></p>
+
+<a href="/Rectangle/List">Powrót do listy</a>

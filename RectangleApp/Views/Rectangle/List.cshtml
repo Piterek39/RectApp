@@ -1,0 +1,12 @@
+﻿@model IEnumerable<RectangleApp.Models.Rectangle>
+
+<h2>Lista prostokątów</h2>
+
+<ul>
+    @foreach (var rectangle in Model)
+    {
+        <li>
+            <a asp-action="Result" asp-route-id="@rectangle.Id">Prostokąt dodany @rectangle.CreatedAt.ToString("g")</a>
+        </li>
+    }
+</ul>
